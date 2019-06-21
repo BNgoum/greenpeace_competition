@@ -1,26 +1,47 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import './App.scss';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import HomePage from './Pages/Home';
+import Slideshow from './Pages/Slideshow';
+import ActionPage from './Pages/Action';
+
+function Index() {
+    return <Slideshow />;
+  }
+  
+function Action() {
+    return <ActionPage />;
 }
 
-export default App;
+function Users() {
+    return <h2>Users</h2>;
+}
+
+function AppRouter() {
+    return (
+      <Router>
+        <div className="gp_wrapper">
+          <nav hidden>
+            <ul>
+              <li>
+                <Link to="/">Home</Link>
+              </li>
+              <li>
+                <Link to="/action/">Action</Link>
+              </li>
+              <li>
+                <Link to="/users/">Users</Link>
+              </li>
+            </ul>
+          </nav>
+  
+          <Route path="/" exact component={Index} />
+          <Route path="/action/" component={Action} />
+          <Route path="/users/" component={Users} />
+        </div>
+      </Router>
+    );
+  }
+  
+  export default AppRouter;

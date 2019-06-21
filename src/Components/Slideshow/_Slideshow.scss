@@ -1,0 +1,43 @@
+#{$projet}_slideshow {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1;
+    height: 100vh;
+    padding: $space-l;
+
+    &--step1 {
+        background: url($path-images + "vague_1.svg") no-repeat bottom left;
+        background-size: 100% 100%;
+    }
+    
+    &--step2 {
+        background: url($path-images + "vague_2.svg") no-repeat bottom left;
+        background-size: 100% 100%;
+    }
+    
+    &--step3 {
+        background: url($path-images + "vague_3.svg") no-repeat bottom left;
+        background-size: 100% 100%;
+    }
+
+    &_header {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &_content, &_footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &_footer {
+        margin-bottom: $space-m;
+
+        #{$projet}_btn--secondary {
+            margin-top: $space-l;
+        }
+    }
+}

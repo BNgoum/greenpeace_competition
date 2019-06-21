@@ -1,0 +1,21 @@
+* {
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: 'Sanctuary', Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+}
+
+p,
+a,
+span {
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+}
+
+#{$projet}_wrapper {
+    // padding: 1rem;
+}

@@ -1,0 +1,17 @@
+@font-face {
+    font-family: 'Sanctuary';
+    src: url($path-fonts + 'SanctuaryLC-Regular.eot');
+    src: url($path-fonts + 'SanctuaryLC-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url($path-fonts + 'Montserrat-Regular.eot');
+    src: url($path-fonts + 'Montserrat-Regular.ttf') format('truetype');
+}
+
+$font-xs: .75rem;
+$font-s: .875rem;
+$font-m: 1.125rem;
+$font-l: 1rem;
+$font-xl: 1.5rem;

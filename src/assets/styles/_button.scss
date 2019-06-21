@@ -1,0 +1,19 @@
+#{$projet}_btn {
+    width: 14.625rem;
+    height: 2.75rem;
+    border-radius: 5.625rem;
+    border: none;
+
+    &--primary {
+        color: #fff;
+        background-color: $color-secondary;
+        font-size: $font-l;
+        font-weight: bold;
+    }
+    
+    &--secondary {
+        color: $color-secondary;
+        border: 1px solid $color-secondary;
+        background-color: transparent;
+    }
+}

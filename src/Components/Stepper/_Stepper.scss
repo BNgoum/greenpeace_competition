@@ -1,0 +1,19 @@
+#{$projet}_stepper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: $space-l;
+
+    &--item {
+        width: 0.5rem;
+        height: 0.5rem;
+        border: 1px solid $color-primary;
+        background-color: transparent;
+        margin: 0 $space-s;
+        border-radius: 50%;
+    }
+
+    &--active {
+        background-color: $color-primary;
+    }
+}
