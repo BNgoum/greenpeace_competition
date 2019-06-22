@@ -16,6 +16,8 @@ span {
     font-family: 'Montserrat', Arial, Helvetica, sans-serif;
 }
 
-#{$projet}_wrapper {
-    // padding: 1rem;
+a,
+button,
+input {
+    outline: none;
 }

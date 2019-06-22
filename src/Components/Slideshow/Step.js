@@ -1,11 +1,10 @@
 import React from "react";
-
-import Stepper from '../../Components/Stepper/Stepper';
+import { Link } from "react-router-dom";
 
 import logoHeader from "../../assets/img/greenpeace_pto.svg";
 import logo from "../../assets/img/logo.svg";
 
-export default class Step1 extends React.Component {
+export default class Step extends React.Component {
 
     handleOnclick = () => {
         this.props.changeCurrentStep();
@@ -40,7 +39,7 @@ export default class Step1 extends React.Component {
         if (this.props.step === 3) {
             return (
                 <>
-                    <button className="gp_btn gp_btn--primary">Prêt pour le plongeon !</button>
+                    <Link to="/signup/" className="gp_btn gp_btn--primary">Prêt pour le plongeon !</Link>
                     <button className="gp_btn gp_btn--secondary">Je signe la pétition</button>
                 </>
             )

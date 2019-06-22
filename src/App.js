@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 import './App.scss';
 
-import HomePage from './Pages/Home';
+import Signup from './Components/Slideshow/SignUp';
 import Slideshow from './Pages/Slideshow';
 import ActionPage from './Pages/Action';
 
@@ -14,9 +14,9 @@ function Action() {
     return <ActionPage />;
 }
 
-function Users() {
-    return <h2>Users</h2>;
-}
+// function Users() {
+//     return <h2>Users</h2>;
+// }
 
 function AppRouter() {
     return (
@@ -38,8 +38,8 @@ function AppRouter() {
   
           <Switch>
             <Route path="/" exact component={Index} />
+            <Route path="/signup/" component={Signup} />
             <Route path="/action/" component={Action} />
-            <Route path="/users/" component={Users} />
           </Switch>
         </div>
       </Router>

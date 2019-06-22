@@ -1,4 +1,8 @@
 #{$projet}_btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
     width: 14.625rem;
     height: 2.75rem;
     border-radius: 5.625rem;
@@ -15,5 +19,6 @@
         color: $color-secondary;
         border: 1px solid $color-secondary;
         background-color: transparent;
+        font-weight: 600;
     }
 }

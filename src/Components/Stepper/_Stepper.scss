@@ -13,7 +13,9 @@
         padding: 0;
         border: none;
         background: transparent;
-        margin: 0 $space-s;
+        margin: 0 .625rem;
+        padding: .3125rem;
+        box-sizing: content-box;
     }
 
     &--item {
