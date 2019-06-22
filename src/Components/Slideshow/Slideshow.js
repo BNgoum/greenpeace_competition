@@ -3,16 +3,27 @@ import React from "react";
 import Step1 from '../../Components/Slideshow/Step1';
 import Step2 from '../../Components/Slideshow/Step2';
 import Step3 from '../../Components/Slideshow/Step3';
+import Stepper from '../../Components/Stepper/Stepper';
+
+import logoHeader from "../../assets/img/greenpeace_pto.svg";
+import logo from "../../assets/img/logo.svg";
 
 export default class Slideshow extends React.Component {
     constructor() {
         super();
         this.state = {
-            currentStep: 1
+            currentStep: 1,
+            lastStep: 1
         }
     }
 
-    handleCurrentStep = step => {
+    handleCurrentStep = () => {
+        this.setState({
+            currentStep: this.state.currentStep + 1
+        })
+    }
+
+    handleStepper = step => {
         this.setState({
             currentStep: step
         })
@@ -25,6 +36,15 @@ export default class Slideshow extends React.Component {
     }
 
     render() {
-        return ( this.displayStep() );
+        return ( 
+            <div className={["gp_slideshow--wrapper gp_slideshow--step" + this.state.currentStep]}>
+                {/* {this.displayStep()} */}
+
+                <Step1 changeCurrentStep={this.handleCurrentStep} step={this.state.currentStep} />
+
+                <Stepper step={this.state.currentStep} changeStepper={this.handleStepper} />
+            </div>
+            
+        );
     }
 }

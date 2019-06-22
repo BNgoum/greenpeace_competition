@@ -8,7 +8,45 @@ import logo from "../../assets/img/logo.svg";
 export default class Step1 extends React.Component {
 
     handleOnclick = () => {
-        this.props.changeCurrentStep(2);
+        this.props.changeCurrentStep();
+    }
+    
+    displayContent = () => {
+        if (this.props.step === 1) {
+            return (
+                <>
+                    <h1 className="gp_title">1 défi par jour</h1>
+                    <p className="gp_sub-title">Chaque jour on te propose un défi (lecture, partage, quizz, vote) à réaliser en 30 secondes chrono.</p>
+                </>
+            )
+        } else if (this.props.step === 2) {
+            return (
+                <>
+                    <h1 className="gp_title">30 secondes</h1>
+                    <p className="gp_sub-title">30 secondes qui te permettront d’apprendre, de partager, d’échanger et de t’engager pour la préservation des océans. </p>
+                </>
+            )
+        } else {
+            return (
+                <>
+                    <h1 className="gp_title">30 jours</h1>
+                    <p className="gp_sub-title"> Plus tu réalises de défis, plus tu gagnes des points. Reviens le lendemain pour voir les résultats de la communauté.</p>
+                </>
+            )
+        }
+    }
+
+    displayFooter = () => {
+        if (this.props.step === 3) {
+            return (
+                <>
+                    <button className="gp_btn gp_btn--primary">Prêt pour le plongeon !</button>
+                    <button className="gp_btn gp_btn--secondary">Je signe la pétition</button>
+                </>
+            )
+        } else {
+            return <button className="gp_btn gp_btn--primary" onClick={this.handleOnclick}>Suivant</button>
+        }
     }
 
     render() {
@@ -20,14 +58,12 @@ export default class Step1 extends React.Component {
                 </div>
 
                 <div className="gp_slideshow_content">
-                    <img src={logo} alt="Logo Greenpeace 30 secondes" />
-                    <h1 className="gp_title">1 défi par jour</h1>
-                    <p className="gp_sub-title">Chaque jour on te propose un défi (lecture, partage, quizz, vote) à réaliser en 30 secondes chrono.</p>
+                    <img src={logo} alt="Logo Greenpeace 30 secondes" className="gp_slideshow--logo" />
+                    { this.displayContent() }
                 </div>
 
                 <div className="gp_slideshow_footer">
-                    <button className="gp_btn gp_btn--primary" onClick={this.handleOnclick}>Suivant</button>
-                    <Stepper step={1} />
+                    { this.displayFooter() }
                 </div>
             </div>
         );

@@ -7,9 +7,9 @@ import logo from "../../assets/img/logo.svg";
 
 export default class Step3 extends React.Component {
 
-    // handleOnclick = () => {
-    //     this.props.changeCurrentStep(2);
-    // }
+    handleOnClickStepper = () => {
+        this.props.changeCurrentStep(2);
+    }
 
     render() {
         return (
@@ -28,7 +28,7 @@ export default class Step3 extends React.Component {
                 <div className="gp_slideshow_footer">
                     <button className="gp_btn gp_btn--primary">Prêt pour le plongeon !</button>
                     <button className="gp_btn gp_btn--secondary">Je signe la pétition</button>
-                    <Stepper step={3} />
+                    {/* <Stepper changeStepper={this.handleOnClickStepper} step={3} /> */}
                 </div>
             </div>
         );

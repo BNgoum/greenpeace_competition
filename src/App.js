@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 import './App.scss';
 
 import HomePage from './Pages/Home';
@@ -36,9 +36,11 @@ function AppRouter() {
             </ul>
           </nav>
   
-          <Route path="/" exact component={Index} />
-          <Route path="/action/" component={Action} />
-          <Route path="/users/" component={Users} />
+          <Switch>
+            <Route path="/" exact component={Index} />
+            <Route path="/action/" component={Action} />
+            <Route path="/users/" component={Users} />
+          </Switch>
         </div>
       </Router>
     );

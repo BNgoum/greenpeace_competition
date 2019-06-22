@@ -10,6 +10,10 @@ export default class Step2 extends React.Component {
         this.props.changeCurrentStep(3);
     }
 
+    handleOnClickStepper = () => {
+        this.props.changeCurrentStep(1);
+    }
+
     render() {
         return (
             <div className="gp_slideshow gp_slideshow--step2">
@@ -26,7 +30,7 @@ export default class Step2 extends React.Component {
 
                 <div className="gp_slideshow_footer">
                     <button className="gp_btn gp_btn--primary" onClick={this.handleOnclick}>Suivant</button>
-                    <Stepper step={2} />
+                    {/* <Stepper changeStepper={this.handleOnClickStepper} step={2} /> */}
                 </div>
             </div>
         );
