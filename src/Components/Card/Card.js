@@ -20,7 +20,7 @@ export default class Card extends React.Component {
     
 
     render() {
-        const { title, isActive, isLocked } = this.props.data;
+        const { title, isLocked } = this.props.data;
 
         return (
             <button className="gp_card" onClick={this.handleOnclick}>

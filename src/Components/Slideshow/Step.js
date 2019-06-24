@@ -50,10 +50,10 @@ export default class Step extends React.Component {
 
     render() {
         return (
-            <div className="gp_slideshow gp_slideshow--step1">
+            <div className="gp_slideshow">
                 <div className="gp_slideshow_header">
                     <img src={logoHeader} alt="Logo Greenpeace Protect the Oceans" />
-                    <a href="#" className="gp_link">Passer</a>
+                    <a href="/" className="gp_link">Passer</a>
                 </div>
 
                 <div className="gp_slideshow_content">

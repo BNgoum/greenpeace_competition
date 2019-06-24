@@ -38,6 +38,9 @@ export default class Action extends React.Component {
     }
 
     render() {
+        // const firstname_user = localStorage.getItem('firstname');
+        // const email_user = localStorage.getItem('email');
+        
         return (
             <div className="gp_action">
                 <h2>Action page</h2>

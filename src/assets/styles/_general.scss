@@ -21,3 +21,11 @@ button,
 input {
     outline: none;
 }
+
+#{$projet}_display {
+    visibility: visible;
+}
+
+#{$projet}_hidden {
+    visibility: hidden;
+}

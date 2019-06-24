@@ -1,17 +1,23 @@
 #{$projet}_input {
     &--text {
+        font-size: 1.125rem;
         width: 100%;
-        padding: .5rem;
+        padding: 1rem .5rem .5rem;
         border: none;
         border-bottom: 1px solid $color-primary;
         background-color: transparent;
 
-        &-wrapper {
-
-        }
-
         &-label {
+            
+            font-family: 'Montserrat', Arial, Helvetica, sans-serif;
             font-weight: 600;
         }
+    }
+}
+
+#{$projet}_message {
+    &--error {
+        margin: .5rem;
+        color: $color-secondary;
     }
 }

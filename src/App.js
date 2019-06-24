@@ -4,19 +4,20 @@ import './App.scss';
 
 import Signup from './Components/Slideshow/SignUp';
 import Slideshow from './Pages/Slideshow';
+import LandingPage from './Pages/LandingPage';
 import ActionPage from './Pages/Action';
 
 function Index() {
-    return <Slideshow />;
+    return <LandingPage />;
   }
   
 function Action() {
     return <ActionPage />;
 }
 
-// function Users() {
-//     return <h2>Users</h2>;
-// }
+function SlideshowScreen() {
+    return <Slideshow />;
+}
 
 function AppRouter() {
     return (
@@ -31,7 +32,7 @@ function AppRouter() {
                 <Link to="/action/">Action</Link>
               </li>
               <li>
-                <Link to="/users/">Users</Link>
+                <Link to="/slideshow/">Slideshow</Link>
               </li>
             </ul>
           </nav>
@@ -40,6 +41,7 @@ function AppRouter() {
             <Route path="/" exact component={Index} />
             <Route path="/signup/" component={Signup} />
             <Route path="/action/" component={Action} />
+            <Route path="/slideshow/" component={SlideshowScreen} />
           </Switch>
         </div>
       </Router>
