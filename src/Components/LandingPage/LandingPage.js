@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import ReactSwipe from 'react-swipe';
 
 import StepReason from './Step_reason';
 
@@ -14,20 +16,26 @@ export default class LandingPage extends React.Component {
         this.state = { currentStep: 1 }
     }
 
+    
 
     render() {
+
         return ( 
             <div className="gp_landing-page">
                 <section className="gp_landing-page--top">
                     <img src={LogoPTO} alt="Logo Protect The Oceans" className="gp_landing-page--logo-pto" />
-                    <img src={Logo} alt="Logo Greenpeace" className="gp_logo--large" />
+                    {/* <div style={{ddisplay: "flex", "flex-direction": "column", "align-items": "center"}}> */}
+                        <img src={Logo} alt="Logo Greenpeace" className="gp_logo--large" />
+                        <h1 className="gp_title"><span className="gp_title gp_title--strong gp_title--secondary">30</span> secondes pour protéger les océans</h1>
+                        <p className="gp_text gp_text--space">Nous devons protéger de toute urgence les océans pour préserver leur biodiversité et lutter contre les changements climatiques. Pour y parvenir, les scientifiques ont un plan : il faut créer un réseau mondial de réserves marines qui protègerait au moins 30 % de la biodiversité des océans, d’ici à 2030.</p>
+                    {/* </div> */}
 
-                    <h1 className="gp_title"><span className="gp_title gp_title--strong gp_title--secondary">30</span> secondes pour protéger les océans</h1>
-                    <p className="gp_text gp_text--space">Nous devons protéger de toute urgence les océans pour préserver leur biodiversité et lutter contre les changements climatiques. Pour y parvenir, les scientifiques ont un plan : il faut créer un réseau mondial de réserves marines qui protègerait au moins 30 % de la biodiversité des océans, d’ici à 2030.</p>
-                
-                    <div className="gp_landing-page--video"></div>
+                    {/* <div style={{display: "flex", "flex-direction": "column", "align-items": "center"}}> */}
+                        <div className="gp_landing-page--video"></div>
 
-                    <button className="gp_btn gp_btn--secondary">Signer la pétition</button>
+                        <button className="gp_btn gp_btn--primary">Signer la pétition</button>
+                    {/* </div> */}
+                    
                 </section>
                 
                 <section className="gp_landing-page--signatures">
@@ -38,7 +46,21 @@ export default class LandingPage extends React.Component {
 
                 <section className="gp_landing-page--defis">
                     <img src={Logo} alt="Logo Greenpeace" className="gp_logo--medium" />
-                    <article className="gp_landing-page--defis-item"></article>
+                    
+                    {/* <Swipe>
+                        <article className="gp_landing-page--defis-item"></article>
+                        <article className="gp_landing-page--defis-item"></article>
+                        <article className="gp_landing-page--defis-item"></article>
+                        <article className="gp_landing-page--defis-item"></article>
+                    </Swipe> */}
+                    {/* <ReactSwipe
+                        className="carousel"
+                        swipeOptions={{ continuous: false }}
+                        >
+                        <div>PANE 1</div>
+                        <div>PANE 2</div>
+                        <div>PANE 3</div>
+                    </ReactSwipe> */}
                 </section>
 
                 <section className="gp_landing-page--raisons">
@@ -47,7 +69,15 @@ export default class LandingPage extends React.Component {
                     <StepReason stepNumber={1} urlAnimal={Turtle} alt="Illustration d'une tortue" title="Protéger les habitats et les espèces" text="Les océans c’est plus de 90 % de l’espace habitable sur la planète et ils abritent quelque 250 000 espèces connues ainsi que beaucoup d’autres qui ne sont pas encore répertoriées." />
                     <StepReason stepNumber={2} urlAnimal={Pinguin} alt="Illustration d'un pinguin" title="RESTAURER LA BIODIVERSITÉ" text="La perte de biodiversité signifie la perte de gènes et de molécules potentiellement précieuses pour la recherche médicale et l’industrie." />
                     <StepReason stepNumber={3} urlAnimal={Bear} alt="Illustration d'un ours" title="PRÉSERVER LES BIENS ET SERVICES" text="Les écosystèmes marins contribuent à l’éradication de la pauvreté, à la croissance économique durable, à la sécurité alimentaire, aux moyens de subsistance durables et au travail inclusif tout en atténuant les effets du changement climatique." />
+                </section>
 
+                <section className="gp_landing-page--bottom">
+                    <h2 className="gp_title"><span className="gp_title gp_title--strong gp_title--secondary">30</span> secondes<br/>pour tout changer !</h2>
+
+                    <p className="gp_text gp_text--big gp_text--uppercase gp_text--title">Rejoignez le mouvement !</p>
+                    
+                    <Link to="/slideshow/" className="gp_btn gp_btn--primary">Prêt pour le plongeon</Link>
+                    <button className="gp_btn gp_btn--secondary">Je signe la pétition</button>
                 </section>
             </div>
             

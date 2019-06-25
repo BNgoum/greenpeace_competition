@@ -8,7 +8,9 @@
     "react-dom": "^16.8.6",
     "react-router-dom": "^5.0.1",
     "react-scripts": "3.0.1",
-    "react-transition-group": "^4.1.1"
+    "react-swipe": "^6.0.4",
+    "react-transition-group": "^4.1.1",
+    "swipe-js-iso": "^2.1.5"
   },
   "scripts": {
     "start": "react-scripts start",

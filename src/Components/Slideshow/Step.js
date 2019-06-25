@@ -39,7 +39,7 @@ export default class Step extends React.Component {
         if (this.props.step === 3) {
             return (
                 <>
-                    <Link to="/signup/" className="gp_btn gp_btn--primary">Prêt pour le plongeon !</Link>
+                    <Link to="/signup/" className="gp_btn gp_btn--primary">Go !</Link>
                     <button className="gp_btn gp_btn--secondary">Je signe la pétition</button>
                 </>
             )

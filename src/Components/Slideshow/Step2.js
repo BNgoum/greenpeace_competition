@@ -30,7 +30,6 @@ export default class Step2 extends React.Component {
 
                 <div className="gp_slideshow_footer">
                     <button className="gp_btn gp_btn--primary" onClick={this.handleOnclick}>Suivant</button>
-                    {/* <Stepper changeStepper={this.handleOnClickStepper} step={2} /> */}
                 </div>
             </div>
         );

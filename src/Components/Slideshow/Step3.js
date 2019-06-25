@@ -1,7 +1,5 @@
 import React from "react";
 
-import Stepper from '../../Components/Stepper/Stepper';
-
 import logoHeader from "../../assets/img/greenpeace_pto.svg";
 import logo from "../../assets/img/logo.svg";
 
@@ -26,9 +24,8 @@ export default class Step3 extends React.Component {
                 </div>
 
                 <div className="gp_slideshow_footer">
-                    <button className="gp_btn gp_btn--primary">Prêt pour le plongeon !</button>
+                    <button className="gp_btn gp_btn--primary">Go !</button>
                     <button className="gp_btn gp_btn--secondary">Je signe la pétition</button>
-                    {/* <Stepper changeStepper={this.handleOnClickStepper} step={3} /> */}
                 </div>
             </div>
         );

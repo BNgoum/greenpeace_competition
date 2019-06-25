@@ -14,8 +14,11 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 1.875rem 1.875rem 5.5rem;
+        // justify-content: space-around;
+        padding: 1.875rem 1.875rem 0;
         background: url($path-images + 'bg_landing.svg') no-repeat;
+        background-size: cover;
+        min-height: 75rem;
 
         #{$projet}_title {
             margin-top: 0;
@@ -23,7 +26,8 @@
         }
 
         #{$projet}_btn {
-            margin-top: 2.5rem;
+            margin-top: 1.5rem;
+            margin-bottom: auto;
         }
     }
 
@@ -32,7 +36,7 @@
         height: 450px;
         width: 327px;
         background-color: #ECECEC;
-        margin-top: 3.75rem;
+        margin-top: auto;
 
         &::after {
             content: '';
@@ -52,12 +56,18 @@
 
     &--defis {
         position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         margin-top: 2rem;
         padding: 7.5rem 1.875rem;
         background: url($path-images + "Union.svg") no-repeat;
+        background-size: cover;
+        min-height: 48rem;
 
         &-item {
             height: 500px;
+            width: 300px;
             background-color: #fff;
         }
 
@@ -83,13 +93,15 @@
 
         &-step1 {
             background: url($path-images + "bg_step1.svg") no-repeat;
-            // padding: 4.5rem 2.5rem 5rem 4.5rem;
+            background-size: cover;
             padding: 5.5rem 3.5rem;
         }
         
         &-step2 {
             background: url($path-images + "bg_step2.svg") no-repeat;
-            padding: 7rem 1.875rem;
+            background-size: cover;
+            min-height: 36rem;
+            padding: 7rem 1.875rem 6rem;
 
             #{$projet}_landing-page--step-number {
                 top: 20px;
@@ -101,8 +113,12 @@
         }
         
         &-step3 {
+            display: flex;
+            justify-content: center;
             background: url($path-images + "bg_step3.svg") no-repeat;
-            padding: 10rem 1.875rem 10rem;
+            background-size: cover;
+            padding: 8rem 1.875rem 8rem;
+            min-height: 48rem;
 
             #{$projet}_landing-page--step-number {
                 top: 50px;
@@ -138,5 +154,24 @@
         font-family: 'Sanctuary', Arial, Helvetica, sans-serif;
         width: 3.375rem;
         height: 3.375rem;
+    }
+
+    &--bottom {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: $space-big-s;
+
+        #{$projet}_title {
+            margin: 0;
+        }
+        
+        #{$projet}_text {
+            margin-bottom: $space-xl;
+        }
+
+        #{$projet}_btn {
+            margin: $space-s 0;
+        }
     }
 }

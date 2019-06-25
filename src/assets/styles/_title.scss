@@ -27,7 +27,22 @@
 }
 
 #{$projet}_text {
+    color: $color-primary;
+    text-align: center;
+
     &--space {
         line-height: 1.35;
+    }
+
+    &--uppercase {
+        text-transform: uppercase;
+    }
+
+    &--big {
+        font-size: 1.1875rem;
+    }
+
+    &--title {
+        font-family: 'Sanctuary', Arial, Helvetica, sans-serif;
     }
 }
