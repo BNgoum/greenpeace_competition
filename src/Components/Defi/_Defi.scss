@@ -1,0 +1,186 @@
+#{$projet}_defi {
+
+    &--unlock {
+        #{$projet}_defi {
+            &--bg {
+                background: url($path-images + "unlock_1.png") no-repeat bottom;
+                background-size: 100%;
+            }
+
+            &--icon {
+                &::after {
+                    background: url($path-images + "arrow.svg") no-repeat;
+                }
+            }
+        }
+    }
+
+    &--lock {
+        #{$projet}_defi {
+            &--bg {
+                background: url($path-images + "lock_1.png") no-repeat bottom;
+                background-size: 100%;
+            }
+
+            &--icon {
+                &::after {
+                    width: 24px;
+                    height: 32px;
+                    background: url($path-images + "lock.svg") no-repeat;
+                }
+            }
+        }
+    }
+
+    &--open {
+        #{$projet}_defi {
+            &--content {
+                display: flex;
+                flex-direction: column;
+                color: #fff;
+                padding: 1.875rem 1.25rem 1.25rem;
+            }
+
+            &--name, &--description, &--participants {
+                font-weight: 600;
+            }
+
+            &--name, &--participants {
+                font-size: 0.875rem;
+            }
+            
+            &--participants {
+                line-height: 1.5;
+                margin-left: .75rem;
+            }
+
+            &--label {
+                font-size: 1.6875rem;
+                margin: .5rem 0 1rem;
+            }
+
+            &--description {
+                font-size: 1.125rem;
+                text-align: left;
+                padding-right: 2rem;
+            }
+
+            &--plus {
+                position: relative;
+                width: 30px;
+                height: 30px;
+                background-color: $color-secondary;
+                border-radius: 50%;
+                margin-left: auto;
+
+                &::before, &::after {
+                    content: '';
+                    position: absolute;
+                    background-color: #fff;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                }
+
+                &::before {
+                    width: 2px;
+                    height: 12px;
+                }
+                
+                &::after {
+                    width: 12px;
+                    height: 2px;
+                }
+            }
+
+            &--bg {
+                background: url($path-images + "open_1.png") no-repeat;
+                background-size: 100%;
+            }
+
+            &--icon {
+                background-color: transparent;
+                width: 16px;
+                height: 20px;
+                margin: 0;
+
+                &::after {
+                    width: 16px;
+                    height: 20px;
+                    background: url($path-images + "user.svg") no-repeat;
+                }
+            }
+
+            &--footer {
+                width: 100%;
+                margin-top: auto;
+                display: flex;
+                align-items: center;
+            }
+        }
+    }
+
+    &--content {
+        display: inline-block;
+        position: relative;
+        border: none;
+        height: 424px;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0);
+        border-radius: 8px;
+
+        &:focus {
+            background-color: rgba(0, 0, 0, .4);
+        }
+    }
+
+    &--bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 8px;
+    }
+
+    &--container {
+        position: relative;
+        display: inline-block;
+        min-height: 26.5rem;
+        width: calc(100% - 1.25rem);
+        background-size: cover;
+        margin: 0 .5rem;
+    }
+
+    &--label {
+        display: block;
+        font-weight: bold;
+        font-size: 1.125rem;
+        margin-bottom: 1.25rem;
+        color: #fff;
+    }
+
+    &--icon {
+        position: relative;
+        display: block;
+        margin: auto;
+        width: 3.75rem;
+        height: 3.75rem;
+        background-color: $color-secondary;
+        border-radius: 50%;
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 32px;
+            height: 24px;
+        }
+    }
+}
+
+#{$projet}_swipe {
+    // width: 100%;
+}

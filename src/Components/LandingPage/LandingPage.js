@@ -1,8 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import ReactSwipe from 'react-swipe';
+import SwipeableViews from 'react-swipeable-views';
 
 import StepReason from './Step_reason';
+import DefiOpen from '../Defi/DefiOpen';
 
 import LogoPTO from '../../assets/img/greenpeace_pto.svg';
 import Logo from '../../assets/img/logo.svg';
@@ -47,20 +48,13 @@ export default class LandingPage extends React.Component {
                 <section className="gp_landing-page--defis">
                     <img src={Logo} alt="Logo Greenpeace" className="gp_logo--medium" />
                     
-                    {/* <Swipe>
-                        <article className="gp_landing-page--defis-item"></article>
-                        <article className="gp_landing-page--defis-item"></article>
-                        <article className="gp_landing-page--defis-item"></article>
-                        <article className="gp_landing-page--defis-item"></article>
-                    </Swipe> */}
-                    {/* <ReactSwipe
-                        className="carousel"
-                        swipeOptions={{ continuous: false }}
-                        >
-                        <div>PANE 1</div>
-                        <div>PANE 2</div>
-                        <div>PANE 3</div>
-                    </ReactSwipe> */}
+                    <SwipeableViews>
+                        <DefiOpen day={1} type="Défi" label="à l'abordage" description="Vous avez donné un nouveau défi à nos matelots de l’Esperanza ..." participants="7 863" />
+                        <DefiOpen day={2} type="Quizz" label="à l'abordage" description="Vous avez donné un nouveau défi à nos matelots de l’Esperanza ..." participants="3 163" />
+                        <DefiOpen day={3} type="Le saviez-vous ?" label="à l'abordage" description="Vous avez donné un nouveau défi à nos matelots de l’Esperanza ..." participants="12 263" />
+                        <DefiOpen day={4} type="Défi" label="à l'abordage" description="Vous avez donné un nouveau défi à nos matelots de l’Esperanza ..." participants="4 463" />
+                    </SwipeableViews>
+
                 </section>
 
                 <section className="gp_landing-page--raisons">

@@ -60,10 +60,14 @@
         justify-content: center;
         align-items: center;
         margin-top: 2rem;
-        padding: 7.5rem 1.875rem;
+        padding: 7.5rem 0;
         background: url($path-images + "Union.svg") no-repeat;
         background-size: cover;
-        min-height: 48rem;
+        min-height: 46rem;
+
+        & > div {
+            padding: 0 2rem;
+        }
 
         &-item {
             height: 500px;
@@ -117,8 +121,8 @@
             justify-content: center;
             background: url($path-images + "bg_step3.svg") no-repeat;
             background-size: cover;
-            padding: 8rem 1.875rem 8rem;
-            min-height: 48rem;
+            padding: 8rem 1.875rem 4rem;
+            min-height: 42rem;
 
             #{$projet}_landing-page--step-number {
                 top: 50px;
@@ -160,6 +164,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        margin-top: $space-big-s;
         margin-bottom: $space-big-s;
 
         #{$projet}_title {

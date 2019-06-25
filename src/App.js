@@ -6,6 +6,7 @@ import Signup from './Components/Slideshow/SignUp';
 import Slideshow from './Pages/Slideshow';
 import LandingPage from './Pages/LandingPage';
 import ActionPage from './Pages/Action';
+import Home from './Pages/Home';
 
 function Index() {
     return <LandingPage />;
@@ -42,6 +43,7 @@ function AppRouter() {
             <Route path="/signup/" component={Signup} />
             <Route path="/action/" component={Action} />
             <Route path="/slideshow/" component={SlideshowScreen} />
+            <Route path="/home/" component={Home} />
           </Switch>
         </div>
       </Router>
