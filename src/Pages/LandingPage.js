@@ -1,8 +1,6 @@
 import React from "react";
-import LandingPage from "../Components/LandingPage/LandingPage";
+import LandingPageComponent from "../Components/LandingPage/LandingPage";
 
-export default class SlideShow extends React.Component {
-    render() {
-        return ( <LandingPage /> );
-    }
-}
+const LandingPage = () => {return ( <LandingPageComponent /> )}
+
+export default LandingPage;

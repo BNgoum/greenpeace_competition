@@ -1,24 +1,6 @@
 import React from "react";
+import HomeComponent from "../Components/Home/Home";
 
-export default class Home extends React.Component {
-    constructor() {
-        super();
-        this.state = { 
-            name: "",
-            email: ""
-        }
-    }
+const Home = () => {return ( <HomeComponent /> )}
 
-    componentDidMount() {
-        
-    }
-
-    render() {
-        return (
-            <div>
-                <h2>Home page</h2>
-                <p>This is Home PAGE</p>
-            </div>
-        );
-    }
-}
+export default Home

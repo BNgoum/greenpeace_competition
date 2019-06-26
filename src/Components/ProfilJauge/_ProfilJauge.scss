@@ -1,0 +1,58 @@
+#{$projet}_jauge {
+    position: relative;
+    display: flex;
+
+    &_points {
+        display: flex;
+        flex-direction: column;
+        text-align: right;
+        font-size: 1rem;
+        font-weight: bold;
+        margin-right: 0.5rem;
+        margin-top: 6px;
+
+        &--text {
+            font-size: .6875rem;
+        }
+    }
+
+    &_avatar {
+        position: relative;
+        display: block;
+        background-color: $color-primary;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+
+        &--icon {
+            position: absolute;
+            top: -6px;
+            right: -20px;
+            width: 61px;
+            height: 47px;
+            background: url($path-images + "homard.svg") no-repeat;
+        }
+    }
+
+    &_progress {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 1px;
+        width: 97px;
+        height: 9px;
+        background-color: #fff;
+        border-radius: 25px;
+        box-shadow: 0px 0px 2px rgba(0, 0, 0, .6);
+
+        &--active {
+            display: block;
+            width: 63px;
+            height: 7px;
+            background-color: $color-secondary;
+            border-top-left-radius: 25px;
+            border-bottom-left-radius: 25px;
+        }
+    }
+}

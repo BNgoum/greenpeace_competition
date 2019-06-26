@@ -2,8 +2,23 @@
 
     &--unlock {
         #{$projet}_defi {
-            &--bg {
+            &--bg1 {
                 background: url($path-images + "unlock_1.png") no-repeat bottom;
+                background-size: 100%;
+            }
+            
+            &--bg2 {
+                background: url($path-images + "unlock_2.png") no-repeat bottom;
+                background-size: 100%;
+            }
+            
+            &--bg3 {
+                background: url($path-images + "unlock_3.png") no-repeat bottom;
+                background-size: 100%;
+            }
+
+            &--bg-open1 {
+                background: url($path-images + "open_1.png") no-repeat bottom;
                 background-size: 100%;
             }
 
@@ -17,8 +32,18 @@
 
     &--lock {
         #{$projet}_defi {
-            &--bg {
-                background: url($path-images + "lock_1.png") no-repeat bottom;
+            &--bg1 {
+                background: url($path-images + "unlock_1.png") no-repeat bottom;
+                background-size: 100%;
+            }
+            
+            &--bg2 {
+                background: url($path-images + "unlock_2.png") no-repeat bottom;
+                background-size: 100%;
+            }
+            
+            &--bg3 {
+                background: url($path-images + "unlock_3.png") no-repeat bottom;
                 background-size: 100%;
             }
 

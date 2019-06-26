@@ -1,8 +1,6 @@
 import React from "react";
-import Slideshow from "../Components/Slideshow/Slideshow";
+import SlideshowComponent from "../Components/Slideshow/Slideshow";
 
-export default class SlideShow extends React.Component {
-    render() {
-        return ( <Slideshow /> );
-    }
-}
+const SlideShow = () => {return ( <SlideshowComponent /> )}
+
+export default SlideShow
