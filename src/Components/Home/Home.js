@@ -12,7 +12,7 @@ export default class Home extends React.Component {
         this.state = { 
             firstname: "",
             email: "",
-            isOpen: false
+            isOpenDefi: false,
         }
     }
 
@@ -25,8 +25,12 @@ export default class Home extends React.Component {
 
     handleIsOpen = () => {
         this.setState({
-            isOpen: true
+            isOpenDefi: true
         })
+
+        setTimeout(() => {
+            this.props.history.push('/defi/');
+        }, 1100);
     }
 
     render() {
@@ -50,8 +54,7 @@ export default class Home extends React.Component {
                     <DefiUnlock isLock={true} numberDefi={2} />
                 </SwipeableViews>
 
-                {/* <DefiUnlock isLock={false} numberDefi={1} isOpen={true} /> */}
-                <span className={"gp_home_bg-open" + (this.state.isOpen ? " gp_home_bg-open-animate" : "")}></span>
+                <span className={"gp_home_bg-open" + (this.state.isOpenDefi ? " gp_home_bg-open-animate" : "")}></span>
             </section>
         );
     }

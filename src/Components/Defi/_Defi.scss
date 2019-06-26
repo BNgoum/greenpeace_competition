@@ -204,8 +204,192 @@
             height: 24px;
         }
     }
-}
 
-#{$projet}_swipe {
-    // width: 100%;
+    @keyframes apparition {
+        0% { opacity: 0; }
+        100% { 
+            opacity: 1;
+        }
+    }
+
+    &_jour {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: 100vh;
+        padding: 83px 30px 30px;
+        background: url($path-images + "bg_defi.svg") no-repeat;
+        animation-name: apparition;
+        animation-duration: 1s; /* or: Xms */
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards; /* or: backwards, both, none */
+        animation-timing-function: ease;
+
+        &--close {
+            position: absolute;
+            top: 30px;
+            right: 30px;
+            width: 20px;
+            height: 20px;
+            padding: 0;
+            transform: rotate(45deg);
+
+            &::before {
+                content: '';
+                position: absolute;
+                background-color: $color-primary;
+                width: 100%;
+                height: 2px;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                background-color: $color-primary;
+                width: 2px;
+                height: 100%;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+
+        &--header {
+            display: flex;
+            flex-direction: column;
+        }
+
+        &--type {
+            font-size: .875rem;
+            color: $color-secondary;
+            font-weight: bold;
+        }
+
+        #{$projet}_title, #{$projet}_text {
+            text-align: left;
+            margin: 0;
+        }
+
+        #{$projet}_title {
+            margin: .5rem 0 1.5rem;
+        }
+
+        #{$projet}_text {
+            font-weight: 600;
+        }
+
+        &--choice {
+            position: relative;
+            padding: 15px;
+            border-radius: 25px;
+            border: 0;
+            margin-bottom: 20px;
+            color: $color-primary;
+            background-color: transparent;
+            z-index: 1;
+
+            &::after {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                background: url($path-images + "bg_choice.svg") no-repeat;
+                background-size: cover;
+                border-radius: 25px;
+                z-index: -1;
+                opacity: .3;
+            }
+
+            &.is-selected {
+                font-weight: 600;
+                &::after {
+                    opacity: .8;
+                }
+            }
+
+            &:last-child {
+                margin: 0;
+            }
+        }
+
+        &--success {
+            padding-top: 160px;
+            justify-content: flex-start;
+
+            #{$projet}_title {
+                text-transform: uppercase;
+                margin: 0 0 .5rem;
+            }
+            
+            #{$projet}_sub-title, #{$projet}_title--secondary {
+                text-transform: uppercase;
+                font-family: 'Sanctuary', Arial, Helvetica, sans-serif;
+                text-align: left;
+            }
+
+            #{$projet}_text {
+                font-weight: normal;
+                margin-top: 25px;
+            }
+
+            #{$projet}_defi_jour--content {
+                margin-top: 70px;
+
+                #{$projet}_text {
+                    margin-top: 0;
+
+                    &:last-of-type {
+                        margin-top: 35px;
+                        margin-bottom: 20px;
+                    }
+                }
+
+                #{$projet}_btn--rs {
+                    margin-right: 40px;
+                }
+            }
+        }
+
+        &--signatures {
+            background: url($path-images + "bg_signatures.svg") no-repeat;
+            justify-content: center;
+
+            #{$projet}_defi_jour {
+                &--header {
+                    width: 100%;
+                    #{$projet}_title {
+                        color: $color-secondary;
+                        text-transform: uppercase;
+                        margin: 0;
+                    }
+
+                    #{$projet}_title--secondary {
+                        font-family: 'Sanctuary', Arial, Helvetica, sans-serif;
+                        color: $color-primary;
+                    }
+                }
+
+                &--content {
+                    margin-top: 40px;
+
+                    #{$projet}_text {
+                        margin-bottom: 10px;
+    
+                        &:last-of-type {
+                            font-weight: normal;
+                            margin-bottom: 40px;
+                        }
+                    }
+                }
+            }
+            
+        }
+    }
 }

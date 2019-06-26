@@ -25,4 +25,24 @@
         background-color: transparent;
         font-weight: 600;
     }
+
+    &--rs {
+        width: 40px;
+        height: 40px;
+        border: 0;
+
+        &-fb {
+            background: url($path-images + "fb.svg") no-repeat;
+        }
+        &-instagram {
+            background: url($path-images + "instagram.svg") no-repeat;
+        }
+        &-twitter {
+            background: url($path-images + "twitter.svg") no-repeat;
+        }
+    }
+
+    &[disabled] {
+        opacity: .4;
+    }
 }
