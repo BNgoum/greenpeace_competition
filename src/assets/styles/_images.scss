@@ -11,3 +11,31 @@
         width: 8.1875rem;
     }
 }
+
+#{$projet}_icon {
+    display: inline-block;
+
+    &-check {
+        background: url($path-images + "check.svg") no-repeat;
+        width: 30px;
+        height: 28px;
+    }
+    
+    &-horloge {
+        background: url($path-images + "horloge.svg") no-repeat;
+        width: 30px;
+        height: 28px;
+    }
+
+    &--user-blue {
+        background: url($path-images + "user_blue.svg") no-repeat;
+        width: 16px;
+        height: 20px;
+
+        &-big {
+            width: 23px;
+            height: 28px;
+            background-size: cover;
+        }
+    }
+}

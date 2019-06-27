@@ -12,6 +12,7 @@ export default class Home extends React.Component {
         this.state = { 
             firstname: "",
             email: "",
+            password: "",
             isOpenDefi: false,
         }
     }
@@ -19,7 +20,8 @@ export default class Home extends React.Component {
     componentDidMount() {
         this.setState({
             firstname: localStorage.getItem('firstname') || "Lucas",
-            email: localStorage.getItem('email') || "lucas.delamer@gmail.com"
+            email: localStorage.getItem('email') || "lucas.delamer@gmail.com",
+            password: localStorage.getItem('password') || ""
         })
     }
 
@@ -39,7 +41,7 @@ export default class Home extends React.Component {
             <section className="gp_home">
                 <section className="gp_home_header">
                     <img src={Logo} alt="Logo Greenpeace" className="gp_logo--mini" />
-                    <ProfilJauge />
+                    <ProfilJauge isRegister={this.state.password} onClick={() => this.props.history.push('/profil/')} history={this.props.history} />
                 </section>
 
                 <section className="gp_home_content">

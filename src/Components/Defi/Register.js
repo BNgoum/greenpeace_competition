@@ -24,10 +24,18 @@ export default class Signatures extends React.Component {
         }
     }
 
+    handleValideForm = () => {
+
+    }
+
+    handleClick = () => {
+        this.props.history.push('/home/');
+    }
+
     render() {
         return (
             <section className="gp_defi_jour gp_defi_jour--register">
-                <button className="gp_defi_jour--close"></button>
+                <button className="gp_defi_jour--close" onClick={this.handleClick}></button>
 
                 <div className="gp_defi_jour--header">
                     <AvatarProfil />

@@ -345,16 +345,16 @@
                 #{$projet}_icon_user--blue {
                     position: relative;
                     display: block;
-                    width: 16px;
-                    height: 20px;
+                    width: 24px;
+                    height: 28px;
                     margin-bottom: 0.5rem;
 
                     &::after {
                         content: '';
                         position: absolute;
                         background: url($path-images + 'user_blue.svg') no-repeat;
-                        width: 16px;
-                        height: 20px;
+                        width: 24px;
+                        height: 28px;
                     }
                 }
 
@@ -415,6 +415,10 @@
 
             #{$projet}_text {
                 font-weight: normal;
+
+                &:last-of-type {
+                    margin-bottom: 30px;
+                }
             }
 
             #{$projet}_text--big {

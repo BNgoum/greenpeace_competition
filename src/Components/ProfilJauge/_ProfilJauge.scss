@@ -34,6 +34,13 @@
         }
     }
 
+    @keyframes fillIn {
+        0% { width: 0%; }
+        100% { 
+            width: 80%;
+        }
+    }
+
     &_progress {
         position: absolute;
         bottom: 0;
@@ -48,11 +55,20 @@
 
         &--active {
             display: block;
-            width: 1%;
+            width: 3%;
             height: 7px;
             background-color: $color-secondary;
             border-top-left-radius: 25px;
             border-bottom-left-radius: 25px;
+
+            &.is-register {
+                width: 80%;
+                animation-name: fillIn;
+                animation-duration: 2s; /* or: Xms */
+                animation-iteration-count: 1;
+                animation-fill-mode: forwards; /* or: backwards, both, none */
+                animation-timing-function: ease-in-out;
+            }
         }
     }
 }

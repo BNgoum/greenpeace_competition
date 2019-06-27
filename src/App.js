@@ -11,6 +11,7 @@ import Defi from './Components/Defi/Defi';
 import Success from './Components/Defi/Success';
 import Signatures from './Components/Defi/Signatures';
 import Register from './Components/Defi/Register';
+import Profil from './Components/Profil/Profil';
 
 function Index() {
     return <LandingPage />;
@@ -52,6 +53,7 @@ function AppRouter() {
             <Route path="/success/" component={Success} />
             <Route path="/signatures/" component={Signatures} />
             <Route path="/register/" component={Register} />
+            <Route path="/profil/" component={Profil} />
           </Switch>
         </div>
       </Router>

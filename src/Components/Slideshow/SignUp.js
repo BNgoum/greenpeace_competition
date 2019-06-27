@@ -34,7 +34,7 @@ export default class SignUp extends React.Component {
             <div className={"gp_signup gp_signup--" + ( this.state.firstnameValide ? "step2" : "step1" )} >
                 <div className="gp_signup_header">
                     <img src={logo} alt="Logo Greenpeace" className="gp_logo--mini" />
-                    <Link to="/" className="gp_link">J'ai déjà un compte</Link>
+                    <Link to="/signup" className="gp_link">J'ai déjà un compte</Link>
                 </div>
                 
                 {

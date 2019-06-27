@@ -53,7 +53,7 @@ export default class Step extends React.Component {
             <div className="gp_slideshow">
                 <div className="gp_slideshow_header">
                     <img src={logoHeader} alt="Logo Greenpeace Protect the Oceans" />
-                    <a href="/" className="gp_link">Passer</a>
+                    <Link to="/home/" className="gp_link">Passer</Link>
                 </div>
 
                 <div className="gp_slideshow_content">

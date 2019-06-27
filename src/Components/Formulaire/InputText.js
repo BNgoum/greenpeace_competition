@@ -14,7 +14,8 @@ class InputText extends React.Component {
         this.setState({ text: event.target.value, isEmpty: false });
 
         if (this.props.type === "firstname") { this.props.changeText("firstname", event.target.value) }
-        else { this.props.changeText("email", event.target.value) }
+        else if (this.props.type === "email") { this.props.changeText("email", event.target.value) }
+        else if (this.props.type === "password") { this.props.changeText("password", event.target.value) }
     }
 
     handleOnKeyDown = event => {
@@ -35,7 +36,8 @@ class InputText extends React.Component {
 
                     this.props.history.push('/home');
                 } else if (this.props.type === "password") {
-                    this.props.history.push('/home');
+                    localStorage.setItem('password', this.state.text);
+                    this.props.history.push('/profil');
                 }
             }
         }
