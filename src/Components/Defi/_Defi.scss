@@ -342,6 +342,22 @@
             #{$projet}_defi_jour--content {
                 margin-top: 70px;
 
+                #{$projet}_icon_user--blue {
+                    position: relative;
+                    display: block;
+                    width: 16px;
+                    height: 20px;
+                    margin-bottom: 0.5rem;
+
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        background: url($path-images + 'user_blue.svg') no-repeat;
+                        width: 16px;
+                        height: 20px;
+                    }
+                }
+
                 #{$projet}_text {
                     margin-top: 0;
 
@@ -390,6 +406,29 @@
                 }
             }
             
+        }
+
+        &--register {
+            justify-content: flex-start;
+            padding: 30px;
+            background: url($path-images + "bg_profil.svg") no-repeat;
+
+            #{$projet}_text {
+                font-weight: normal;
+            }
+
+            #{$projet}_text--big {
+                text-transform: uppercase;
+                font-family: 'Sanctuary', Arial, Helvetica, sans-serif;
+                font-size: 18px;
+                margin-bottom: 10px;
+            }
+
+            #{$projet}_defi_jour {
+                &--content {
+                    margin-top: 120px;
+                }
+            }
         }
     }
 }

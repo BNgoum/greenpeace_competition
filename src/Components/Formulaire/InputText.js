@@ -33,19 +33,22 @@ class InputText extends React.Component {
                 } else if (this.props.type === "email") {
                     localStorage.setItem('email', this.state.text);
 
-                    this.props.history.push('/action');
+                    this.props.history.push('/home');
+                } else if (this.props.type === "password") {
+                    this.props.history.push('/home');
                 }
             }
         }
     }
 
+
     render() {
         const { label1, label2, idInputText, typeLabel, placeholder } = this.props;
-
+        
         return (
             <form className="gp_input--text-wrapper">
                 <label htmlFor={idInputText} className="gp_input--text-label">{label1}<span className="gp_input--text-sub-label">{label2}</span></label>
-                <input id={idInputText} type="text" value={this.state.text} onChange={this.handleOnChange} onKeyDown={this.handleOnKeyDown} placeholder={placeholder} className="gp_input--text" />
+                <input id={idInputText} type="text" value={this.props.defaultValue ? this.props.defaultValue.toString() : this.state.text} onChange={this.handleOnChange} onKeyDown={this.handleOnKeyDown} placeholder={placeholder} className="gp_input--text" />
                 <p className={ "gp_message--error " + (this.state.isEmpty ? "gp_visible" : "gp_hidden") }>Vous devez saisir un { typeLabel }.</p>
             </form>
         );

@@ -31,8 +31,8 @@ export default class Defi extends React.Component {
 
                 <div className="gp_defi_jour--content">
                     <button className={"gp_defi_jour--choice" + (this.state.isSelected === 1 ? " is-selected" : "")} onClick={() => this.handleOnClick(1)}>Réciter l’alphabet en portugais. Après tout, ils longent la côte brésilienne...</button>
-                    <button className={"gp_defi_jour--choice" + (this.state.isSelected === 2 ? " is-selected" : "")} onClick={() => this.handleOnClick(2)}>Réciter l’alphabet en portugais. Après tout, ils longent la côte brésilienne...</button>
-                    <button className={"gp_defi_jour--choice" + (this.state.isSelected === 3 ? " is-selected" : "")} onClick={() => this.handleOnClick(3)}>Réciter l’alphabet en portugais. Après tout, ils longent la côte brésilienne...</button>
+                    <button className={"gp_defi_jour--choice" + (this.state.isSelected === 2 ? " is-selected" : "")} onClick={() => this.handleOnClick(2)}>Se prendre en photo avec le poisson le plus moche qu’ils trouvent.</button>
+                    <button className={"gp_defi_jour--choice" + (this.state.isSelected === 3 ? " is-selected" : "")} onClick={() => this.handleOnClick(3)}>Faire la planche sur l’eau avec le #protectintheocean</button>
                 </div>
 
                 <button className="gp_btn gp_btn--primary" disabled={this.state.isSelected !== 0 ? false : true} onClick={this.handleVote}>Je vote</button>

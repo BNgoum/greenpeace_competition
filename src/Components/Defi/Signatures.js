@@ -1,7 +1,5 @@
 import React from "react";
 
-import User from "../../assets/img/user.svg";
-
 export default class Signatures extends React.Component {
     constructor() {
         super();
@@ -16,15 +14,18 @@ export default class Signatures extends React.Component {
           .then(data => {
             let count = data.unique_count.toString().replace(/(\d{3})/g, '$1 ').replace(/(^\s+|\s+$)/,' ');
             
-
             this.setState({signatures: count})
           });
-      }
+    }
+
+    handleOnClick = () => {
+        this.props.history.push('/register/');
+    }
 
     render() {
         return (
             <section className="gp_defi_jour gp_defi_jour--signatures">
-                <button className="gp_defi_jour--close"></button>
+                <button className="gp_defi_jour--close" onClick={this.handleOnClick}></button>
 
                 <div className="gp_defi_jour--header">
                     <span className="gp_title">{this.state.signatures} <span className="gp_title--secondary">signatures</span></span>

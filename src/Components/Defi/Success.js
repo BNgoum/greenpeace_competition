@@ -1,7 +1,5 @@
 import React from "react";
 
-import User from "../../assets/img/user.svg";
-
 export default class Defi extends React.Component {
     constructor() {
         super();
@@ -10,16 +8,14 @@ export default class Defi extends React.Component {
         }
     }
 
-    handleOnClick = choice => {
-        this.setState({
-            isSelected: choice
-        })
+    handleOnClick = () => {
+        this.props.history.push('/signatures/');
     }
 
     render() {
         return (
             <section className="gp_defi_jour gp_defi_jour--success">
-                <button className="gp_defi_jour--close"></button>
+                <button className="gp_defi_jour--close" onClick={this.handleOnClick}></button>
 
                 <div className="gp_defi_jour--header">
                     <span className="gp_title">Bravo !</span>
@@ -29,7 +25,7 @@ export default class Defi extends React.Component {
                 </div>
 
                 <div className="gp_defi_jour--content">
-                    <img src={User} alt="Icon user" />
+                    <span className="gp_icon_user--blue"></span>
                     <p className="gp_text">2 045 personnes ont aussi participé à ce vote.</p>
                     <p className="gp_text">Et si vous le partagiez pour embarquer vos proches dans ces défis ?</p>
 

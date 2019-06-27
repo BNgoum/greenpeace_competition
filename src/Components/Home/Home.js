@@ -49,9 +49,9 @@ export default class Home extends React.Component {
 
                 <SwipeableViews>
                     <DefiUnlock isLock={false} numberDefi={1} handleIsOpen={this.handleIsOpen} />
-                    <DefiUnlock isLock={true} numberDefi={2} />
-                    <DefiUnlock isLock={true} numberDefi={3} />
-                    <DefiUnlock isLock={true} numberDefi={2} />
+                    <DefiUnlock isLock={true} numberDefi={2} handleIsOpen={this.handleIsOpen} />
+                    <DefiUnlock isLock={true} numberDefi={3} handleIsOpen={this.handleIsOpen} />
+                    <DefiUnlock isLock={true} numberDefi={2} handleIsOpen={this.handleIsOpen} />
                 </SwipeableViews>
 
                 <span className={"gp_home_bg-open" + (this.state.isOpenDefi ? " gp_home_bg-open-animate" : "")}></span>

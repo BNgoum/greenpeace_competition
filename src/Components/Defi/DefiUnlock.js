@@ -9,7 +9,9 @@ export default class DefiUnlock extends React.Component {
     }
 
     handleOnClick = () => {
-        this.props.handleIsOpen();
+        if (!this.props.isLock) {
+            this.props.handleIsOpen();
+        }
     }
 
     render() {
