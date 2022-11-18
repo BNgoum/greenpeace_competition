@@ -10,7 +10,7 @@
     "react-dom": "^16.8.6",
     "react-full-screen": "^0.2.4",
     "react-router-dom": "^5.0.1",
-    "react-scripts": "3.0.1",
+    "react-scripts": "5.0.1",
     "react-swipe": "^6.0.4",
     "react-swipeable-views": "^0.13.3",
     "react-transition-group": "^4.1.1",
